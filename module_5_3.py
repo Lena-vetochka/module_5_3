@@ -22,16 +22,16 @@ class House:
         elif isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
 
-    def __le__(self, other):
+    def __le__(self, other):                           # <=
         return self.__eq__(other) or self.__lt__(other)
 
-    def __gt__(self, other):
+    def __gt__(self, other):                           # >
         return not self.__le__(other)
 
-    def __ge__(self, other):
+    def __ge__(self, other):                          # >=
         return not self.__lt__(other)
 
-    def __ne__(self, other):
+    def __ne__(self, other):                          # !=
         return not self.__eq__(other)
 
     def __add__(self, value):
